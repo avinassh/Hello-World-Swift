@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func showMessage() {
+        let alertMessage = UIAlertController(title: "Hello Title", message: "Hello World", preferredStyle: UIAlertControllerStyle.Alert)
+        alertMessage.addAction(UIAlertAction(title: "Ok?", style: UIAlertActionStyle.Default, handler: nil))
+        presentViewController(alertMessage, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
